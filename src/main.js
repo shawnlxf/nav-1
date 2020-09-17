@@ -4,8 +4,10 @@ const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
 const $iconMode = $('.icon-mode')
 const originHashMap = [
-    { url: 'https://news.qq.com/', text: '腾讯新闻' },
-    { url: 'https://zhihu.com/', text: '知乎' }
+    { url: 'https://www.iconfont.cn/', text: 'iconfont' },
+    { url: 'https://www.iconfinder.com/', text: 'iconfinder' },
+    { url: 'https://material.io/design/color/the-color-system.html#tools-for-picking-colors', text: 'material colors' },
+    { url: 'https://chat.mozilla.org/#/room/#mdn:mozilla.org', text: 'matrix(mozilla)' },
 ]
 const hashMap = xObject || originHashMap
 const $reset = $('.reset')

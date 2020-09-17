@@ -1,16 +1,33 @@
-rm -rf dist
-parcel build src/index.html --no-minify
+1. 编译
 
-进入 dist/，打开 index.html 看一下
+    ```
+    rm -rf dist
+    parcel build src/index.html --no-minify
+    ```
 
-<script src="/main.a561dad7.js"></script>
+    进入 dist/，打开 index.html 看一下
 
-改成
+    ```
+    parcel build src/index.html --no-minify --public-url ./
+    ```
 
-parcel build src/index.html --no-minify --public-url ./
+    ``` html
+    <script src="/main.a561dad7.js"></script>
+    ```
 
-help: parcel build --help
+    改成
 
+    ``` html
+    <script src="/main.a561dad7.js"></script>
+    ```
 
+    help: parcel build --help
+
+2. yarn build
+
+```
+yarn init -y
+yarn build
+```
 
 

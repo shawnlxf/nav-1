@@ -124,11 +124,17 @@ var x = localStorage.getItem('x');
 var xObject = JSON.parse(x);
 var $iconMode = $('.icon-mode');
 var originHashMap = [{
-  url: 'https://news.qq.com/',
-  text: '腾讯新闻'
+  url: 'https://www.iconfont.cn/',
+  text: 'iconfont'
 }, {
-  url: 'https://zhihu.com/',
-  text: '知乎'
+  url: 'https://www.iconfinder.com/',
+  text: 'iconfinder'
+}, {
+  url: 'https://material.io/design/color/the-color-system.html#tools-for-picking-colors',
+  text: 'material colors'
+}, {
+  url: 'https://chat.mozilla.org/#/room/#mdn:mozilla.org',
+  text: 'matrix(mozilla)'
 }];
 var hashMap = xObject || originHashMap;
 var $reset = $('.reset');
@@ -253,4 +259,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.a561dad7.js.map
+//# sourceMappingURL=main.20b88ffb.js.map
