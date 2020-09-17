@@ -92,22 +92,25 @@ $('.reset').on('click', () => {
     location.reload()
 })
 
-$('.add-button')
-    .on('click', () => {
-        let url = window.prompt('请输入网址', 'https://')
-        if (url.indexOf('http') !== 0) {
-            url = 'https://' + url
-        }
-        let text = window.prompt('请输入网址名称')
-        if (!text) {
-            text = simplifyUrl(url)
-        }
-        hashMap.push({
-            url: url,
-            text: text
-        })
-        applyHashMap()
+$('.add-button').on('click', () => {
+    let url = window.prompt('请输入网址', 'https://')
+
+    if (simplifyUrl(url) === '') {
+        return
+    }
+    if (url.indexOf('http') !== 0) {
+        url = 'https://' + url
+    }
+    let text = window.prompt('请输入网址名称')
+    if (!text) {
+        text = simplifyUrl(url)
+    }
+    hashMap.push({
+        url: url,
+        text: text
     })
+    applyHashMap()
+})
 
 window.onbeforeunload = () => {
     if (!store) {
@@ -122,9 +125,9 @@ window.onload = () => {
     applyHashMap()
 }
 
-$(document).on('keypress', (e)=>{
+$(document).on('keypress', (e) => {
     // const key = e.key 简写
-    const {key} = e
+    const { key } = e
     for (let i = 0; i < hashMap.length; i++) {
         // console.log(hashMap[i].text[0])
         if (!hashMap[i].text) {

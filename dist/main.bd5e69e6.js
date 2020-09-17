@@ -212,6 +212,10 @@ $('.reset').on('click', function () {
 $('.add-button').on('click', function () {
   var url = window.prompt('请输入网址', 'https://');
 
+  if (simplifyUrl(url) === '') {
+    return;
+  }
+
   if (url.indexOf('http') !== 0) {
     url = 'https://' + url;
   }
@@ -259,4 +263,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.20b88ffb.js.map
+//# sourceMappingURL=main.bd5e69e6.js.map

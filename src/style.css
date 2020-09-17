@@ -103,6 +103,14 @@ a {
   justify-content: space-between;
 }
 
+/* 屏幕宽度很小时有问题，如 iphone5, galaxy fold */
+@media (max-width: 640px) {
+  .website-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 @media (min-width: 640px) {
   .website-list {
     margin-left: 0;
